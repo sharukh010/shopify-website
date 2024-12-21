@@ -14,6 +14,11 @@ import {
     Link
   } from "react-router-dom";
 const App = () => {
+  const [loading, setLoading] = React.useState(true);
+  window.addEventListener("load", () => {
+    console.log('hello')
+    setLoading(false);
+  });
   return (
     <Router>
       <NavbarSimple />
